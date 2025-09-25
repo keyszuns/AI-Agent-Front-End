@@ -1,0 +1,308 @@
+/* 全局样式重置与基础设置 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 应用容器样式 */
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #f5f5f9 0%, #e8eaf6 100%);
+}
+
+/* MUI 组件覆盖样式 */
+.MuiTypography-root {
+  margin: 0;
+}
+
+/* 按钮效果增强 */
+.MuiButton-root {
+  transition: all 0.3s ease;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.MuiButton-root:hover {
+  transform: translateY(-1px);
+}
+
+.MuiButton-contained {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.MuiButton-contained:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Paper 组件样式增强 */
+.MuiPaper-root {
+  transition: all 0.3s ease;
+}
+
+.MuiPaper-root:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* 标签页样式 */
+.MuiTabs-root {
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.MuiTab-root {
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: none;
+  min-height: 48px;
+  padding: 12px 16px;
+}
+
+.MuiTabs-indicator {
+  height: 3px;
+  background-color: #1976d2;
+}
+
+/* 表格样式增强 */
+.MuiTableCell-root {
+  font-size: 0.95rem;
+  padding: 12px 16px;
+}
+
+.MuiTableCell-head {
+  font-weight: 600;
+  background-color: #f5f7fa;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.MuiTableRow-root:hover {
+  background-color: #f5f7fa !important;
+}
+
+/* 输入框样式增强 */
+.MuiTextField-root {
+  width: 100%;
+}
+
+.MuiOutlinedInput-root {
+  transition: all 0.3s ease;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #1976d2;
+}
+
+/* 进度条样式 */
+.MuiLinearProgress-root {
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.MuiLinearProgress-bar {
+  border-radius: 4px;
+  background: linear-gradient(90deg, #1976d2 0%, #2196f3 100%);
+  transition: width 0.3s ease;
+}
+
+/* 弹窗样式增强 */
+.MuiDialog-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MuiDialog-paper {
+  max-width: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.MuiDialogTitle-root {
+  font-weight: 600;
+  padding: 20px 24px;
+  background-color: #f5f7fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.MuiDialogContent-root {
+  padding: 24px;
+}
+
+.MuiDialogActions-root {
+  padding: 16px 24px;
+  background-color: #fafafa;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Snackbar 样式增强 */
+.MuiSnackbar-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.MuiSnackbarContent-root {
+  min-width: 320px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 12px 16px;
+  font-weight: 500;
+}
+
+/* 表单控件样式 */
+.MuiFormControl-root {
+  width: 100%;
+}
+
+.MuiSelect-root {
+  text-transform: none;
+}
+
+.MuiInputLabel-root {
+  font-weight: 500;
+}
+
+/* 图标按钮样式 */
+.MuiIconButton-root {
+  transition: all 0.2s ease;
+}
+
+.MuiIconButton-root:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* 工具提示样式 */
+.MuiTooltip-tooltip {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 加载动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.MuiPaper-root {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .MuiBox-root {
+    padding: 12px !important;
+  }
+  
+  .MuiTab-root {
+    font-size: 0.85rem;
+    min-height: 44px;
+    padding: 10px 8px;
+  }
+  
+  .MuiTypography-h4 {
+    font-size: 1.75rem;
+  }
+  
+  .MuiTypography-h5 {
+    font-size: 1.5rem;
+  }
+  
+  .MuiTableCell-root {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+  
+  .MuiButton-root {
+    font-size: 0.85rem;
+    padding: 10px 16px;
+  }
+  
+  .MuiDialog-paper {
+    margin: 16px;
+    max-width: calc(100vw - 32px);
+  }
+  
+  .MuiTextField-root textarea {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .MuiTypography-h4 {
+    font-size: 1.5rem;
+  }
+  
+  .MuiTypography-h5 {
+    font-size: 1.25rem;
+  }
+  
+  .MuiDialogTitle-root {
+    padding: 16px 20px;
+  }
+  
+  .MuiDialogContent-root {
+    padding: 16px 20px;
+  }
+  
+  .MuiDialogActions-root {
+    padding: 12px 20px;
+  }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 打印样式 */
+@media print {
+  .MuiTabs-root,
+  .MuiButton-root,
+  .MuiIconButton-root,
+  .MuiTextField-root,
+  .MuiSnackbar-root {
+    display: none;
+  }
+  
+  .MuiPaper-root {
+    box-shadow: none;
+    border: 1px solid #e0e0e0;
+  }
+}
